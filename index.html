@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSD Experiments | Mahendra</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #dcdcdc;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            display: block;
+            text-decoration: none;
+            color: #00eaff;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Full Stack Development Experiments</h1>
+        <p>HTML, CSS & Media Practice Files</p>
+    </header>
+
+    <section class="container">
+
+        <div class="card">
+            <h2>Experiment 1</h2>
+            <a href="1a.html">Experiment 1A</a>
+            <a href="1b.html">Experiment 1B</a>
+            <a href="1c.html">Experiment 1C</a>
+            <a href="1d.html">Experiment 1D</a>
+        </div>
+
+        <div class="card">
+            <h2>Experiment 2</h2>
+            <a href="2a.html">Experiment 2A</a>
+            <a href="2b.html">Experiment 2B</a>
+            <a href="2c.html">Experiment 2C</a>
+        </div>
+
+        <div class="card">
+            <h2>Experiment 3</h2>
+            <a href="3a.html">Experiment 3A</a>
+            <a href="3b.html">Experiment 3B</a>
+            <a href="3c.html">Experiment 3C</a>
+            <a href="3d.html">Experiment 3D</a>
+        </div>
+
+        <div class="card">
+            <h2>Media Files</h2>
+            <a href="1a.png">Image 1A</a>
+            <a href="1c-2.png">Image 1C-2</a>
+            <a href="3b.mp3">Audio File</a>
+            <a href="3b.mp4">Video File</a>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 | Created by Mahendra | GitHub Pages
+    </footer>
+
+</body>
+</html>
