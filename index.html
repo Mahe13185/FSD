@@ -3,129 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FSD Experiments | Mahendra</title>
+    <title>FSD Lab Experiments | Mahendra</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Segoe UI", sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
+            background: radial-gradient(circle at top, #1f2933, #0f172a);
+            color: #e5e7eb;
             min-height: 100vh;
-            padding: 30px;
         }
 
         header {
+            padding: 40px 20px;
             text-align: center;
-            margin-bottom: 40px;
+            animation: fadeDown 1s ease;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.7rem;
+            color: #38bdf8;
         }
 
         header p {
+            margin-top: 10px;
             font-size: 1.1rem;
-            color: #dcdcdc;
+            color: #cbd5f5;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
+            padding: 30px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.3s, background 0.3s;
+            background: linear-gradient(145deg, #111827, #1f2933);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            transition: all 0.4s ease;
+            animation: fadeUp 1s ease;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(56,189,248,0.25);
         }
 
         .card h2 {
-            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #22d3ee;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
             margin-bottom: 15px;
+            color: #9ca3af;
         }
 
         .card a {
             display: block;
             text-decoration: none;
-            color: #00eaff;
-            margin-bottom: 8px;
+            color: #38bdf8;
+            margin: 6px 0;
             font-size: 0.95rem;
+            transition: 0.3s;
         }
 
         .card a:hover {
-            text-decoration: underline;
-            color: #ffffff;
+            color: #f8fafc;
+            padding-left: 6px;
         }
 
         footer {
             text-align: center;
-            margin-top: 50px;
+            padding: 25px;
             font-size: 0.9rem;
-            color: #cccccc;
+            color: #94a3b8;
+            background: #020617;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Full Stack Development Experiments</h1>
-        <p>HTML, CSS & Media Practice Files</p>
-    </header>
+<header>
+    <h1>Full Stack Development Lab</h1>
+    <p>Experiment Dashboard – HTML, Media & Web Concepts</p>
+</header>
 
-    <section class="container">
+<section class="container">
 
-        <div class="card">
-            <h2>Experiment 1</h2>
-            <a href="1a.html">Experiment 1A</a>
-            <a href="1b.html">Experiment 1B</a>
-            <a href="1c.html">Experiment 1C</a>
-            <a href="1d.html">Experiment 1D</a>
-        </div>
+    <div class="card">
+        <h2>Experiment 1 – HTML Basics</h2>
+        <p>Basic HTML structure, formatting tags, images and links.</p>
+        <a href="1a.html">1A – HTML Introduction</a>
+        <a href="1b.html">1B – Text Formatting</a>
+        <a href="1c.html">1C – Images & Media</a>
+        <a href="1d.html">1D – Hyperlinks</a>
+    </div>
 
-        <div class="card">
-            <h2>Experiment 2</h2>
-            <a href="2a.html">Experiment 2A</a>
-            <a href="2b.html">Experiment 2B</a>
-            <a href="2c.html">Experiment 2C</a>
-        </div>
+    <div class="card">
+        <h2>Experiment 2 – Lists & Tables</h2>
+        <p>Working with lists, tables and page layouts.</p>
+        <a href="2a.html">2A – HTML Lists</a>
+        <a href="2b.html">2B – Tables</a>
+        <a href="2c.html">2C – Combined Layout</a>
+    </div>
 
-        <div class="card">
-            <h2>Experiment 3</h2>
-            <a href="3a.html">Experiment 3A</a>
-            <a href="3b.html">Experiment 3B</a>
-            <a href="3c.html">Experiment 3C</a>
-            <a href="3d.html">Experiment 3D</a>
-        </div>
+    <div class="card">
+        <h2>Experiment 3 – Multimedia</h2>
+        <p>Audio, video embedding and advanced HTML tags.</p>
+        <a href="3a.html">3A – Audio Tags</a>
+        <a href="3b.html">3B – Video Tags</a>
+        <a href="3c.html">3C – Media Controls</a>
+        <a href="3d.html">3D – Media Integration</a>
+    </div>
 
-        <div class="card">
-            <h2>Media Files</h2>
-            <a href="1a.png">Image 1A</a>
-            <a href="1c-2.png">Image 1C-2</a>
-            <a href="3b.mp3">Audio File</a>
-            <a href="3b.mp4">Video File</a>
-        </div>
+    <div class="card">
+        <h2>Media Resources</h2>
+        <p>Supporting files used in experiments.</p>
+        <a href="1a.png">Image – 1A</a>
+        <a href="1c-2.png">Image – 1C</a>
+        <a href="3b.mp3">Audio File</a>
+        <a href="3b.mp4">Video File</a>
+    </div>
 
-    </section>
+</section>
 
-    <footer>
-        © 2026 | Created by Mahendra | GitHub Pages
-    </footer>
+<footer>
+    © 2026 | Mahendra Gampala | FSD Lab | Hosted on GitHub Pages
+</footer>
 
 </body>
 </html>
