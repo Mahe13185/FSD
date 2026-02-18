@@ -1,131 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FSD Experiments | Mahendra</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSD Experiments | Mahendra</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", sans-serif;
-        }
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-        body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
-            min-height: 100vh;
-            padding: 30px;
-        }
+<style>
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+:root{
+--bg:#0f2027;
+--card:#1f3a44;
+--text:white;
+--accent:#00eaff;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+.light{
+--bg:#f4f7fb;
+--card:#ffffff;
+--text:#222;
+--accent:#0077ff;
+}
 
-        header p {
-            font-size: 1.1rem;
-            color: #dcdcdc;
-        }
+body{
+margin:0;
+font-family:Segoe UI;
+background:var(--bg);
+color:var(--text);
+transition:.3s;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+header{
+text-align:center;
+padding:25px;
+}
 
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.3s, background 0.3s;
-        }
+h1{margin-bottom:8px}
 
-        .card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.18);
-        }
+.topbar{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:10px;
+flex-wrap:wrap;
+}
 
-        .card h2 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
+input{
+padding:10px 14px;
+border-radius:8px;
+border:none;
+width:250px;
+outline:none;
+}
 
-        .card a {
-            display: block;
-            text-decoration: none;
-            color: #00eaff;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-        }
+.toggle{
+cursor:pointer;
+padding:10px 15px;
+border-radius:8px;
+background:var(--card);
+}
 
-        .card a:hover {
-            text-decoration: underline;
-            color: #ffffff;
-        }
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+padding:20px;
+max-width:1100px;
+margin:auto;
+}
 
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9rem;
-            color: #cccccc;
-        }
-    </style>
+.card{
+background:var(--card);
+padding:18px;
+border-radius:14px;
+transition:.25s;
+}
+
+.card:hover{transform:translateY(-6px)}
+
+.card h2{color:var(--accent)}
+
+.card a{
+display:flex;
+align-items:center;
+gap:10px;
+color:var(--text);
+text-decoration:none;
+padding:6px 0;
+}
+
+.card a:hover{color:var(--accent)}
+
+footer{
+text-align:center;
+padding:20px;
+opacity:.7;
+}
+
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Full Stack Development Experiments</h1>
-        <p>HTML, CSS & Media Practice Files</p>
-    </header>
+<header>
+<h1>Full Stack Development Experiments</h1>
+<p>HTML, CSS & Media Practice Files</p>
 
-    <section class="container">
+<div class="topbar">
+<input type="text" id="search" placeholder="Search experiment...">
+<div class="toggle" onclick="toggleMode()">🌙 Theme</div>
+</div>
+</header>
 
-        <div class="card">
-            <h2>Experiment 1</h2>
-            <a href="1a.html">Experiment 1A</a>
-            <a href="1b.html">Experiment 1B</a>
-            <a href="1c.html">Experiment 1C</a>
-            <a href="1d.html">Experiment 1D</a>
-        </div>
+<div class="container" id="list">
 
-        <div class="card">
-            <h2>Experiment 2</h2>
-            <a href="2a.html">Experiment 2A</a>
-            <a href="2b.html">Experiment 2B</a>
-            <a href="2c.html">Experiment 2C</a>
-        </div>
+<div class="card">
+<h2>Experiment 1</h2>
+<a href="1a.html"><i class="fa-solid fa-code"></i>1a – HTML Structure</a>
+<a href="1b.html"><i class="fa-solid fa-font"></i>1b – Text Formatting</a>
+<a href="1c.html"><i class="fa-solid fa-image"></i>1c – Images</a>
+<a href="1d.html"><i class="fa-solid fa-link"></i>1d – Hyperlinks</a>
+</div>
 
-        <div class="card">
-            <h2>Experiment 3</h2>
-            <a href="3a.html">Experiment 3A</a>
-            <a href="3b.html">Experiment 3B</a>
-            <a href="3c.html">Experiment 3C</a>
-            <a href="3d.html">Experiment 3D</a>
-        </div>
+<div class="card">
+<h2>Experiment 2</h2>
+<a href="2a.html"><i class="fa-solid fa-list"></i>2a – Lists</a>
+<a href="2b.html"><i class="fa-solid fa-table"></i>2b – Tables</a>
+<a href="2c.html"><i class="fa-solid fa-border-all"></i>2c – Layout</a>
+</div>
 
-        <div class="card">
-            <h2>Media Files</h2>
-            <a href="1a.png">Image 1A</a>
-            <a href="1c-2.png">Image 1C-2</a>
-            <a href="3b.mp3">Audio File</a>
-            <a href="3b.mp4">Video File</a>
-        </div>
+<div class="card">
+<h2>Experiment 3</h2>
+<a href="3a.html"><i class="fa-solid fa-music"></i>3a – Audio</a>
+<a href="3b.html"><i class="fa-solid fa-video"></i>3b – Video</a>
+<a href="3c.html"><i class="fa-solid fa-sliders"></i>3c – Controls</a>
+<a href="3d.html"><i class="fa-solid fa-photo-film"></i>3d – Integration</a>
+</div>
 
-    </section>
+<div class="card">
+<h2>Experiment 4</h2>
+<a href="4a.html"><i class="fa-solid fa-file-lines"></i>4a – Form</a>
+<a href="4%20(2nd).html"><i class="fa-solid fa-keyboard"></i>4b – Input Types</a>
+<a href="4%20(3rd).html"><i class="fa-solid fa-check-square"></i>4c – Radio/Checkbox</a>
+<a href="4%20(4th).html"><i class="fa-solid fa-caret-down"></i>4d – Dropdown</a>
+<a href="4%20(5th).html"><i class="fa-solid fa-paper-plane"></i>4e – Submit Form</a>
+</div>
 
-    <footer>
-        © 2026 | Created by Mahendra | GitHub Pages
-    </footer>
+<div class="card">
+<h2>Experiment 5</h2>
+<a href="5a.html"><i class="fa-solid fa-window-restore"></i>5a – Frames</a>
+<a href="5b.html"><i class="fa-solid fa-compass"></i>5b – Navigation</a>
+<a href="5c.html"><i class="fa-solid fa-palette"></i>5c – Styled Page</a>
+<a href="5d.html"><i class="fa-solid fa-layer-group"></i>5d – Layout</a>
+</div>
+
+<div class="card">
+<h2>Media</h2>
+<a href="1a.png"><i class="fa-solid fa-image"></i>Image</a>
+<a href="1c-2.png"><i class="fa-solid fa-image"></i>Image 2</a>
+<a href="3b.mp3"><i class="fa-solid fa-music"></i>Audio</a>
+<a href="3b.mp4"><i class="fa-solid fa-film"></i>Video</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 | Mahendra | GitHub Pages
+</footer>
+
+<script>
+
+// search
+document.getElementById("search").addEventListener("keyup",function(){
+let value=this.value.toLowerCase();
+document.querySelectorAll(".card a").forEach(a=>{
+a.style.display=a.textContent.toLowerCase().includes(value)?"flex":"none";
+});
+});
+
+// theme
+function toggleMode(){
+document.body.classList.toggle("light");
+}
+
+</script>
 
 </body>
 </html>
