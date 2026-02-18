@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 1. Simple Presence: Target any link that has a 'title' */
+  a[title] {
+    color: darkorange;
+    font-weight: bold;
+  }
+
+  /* 2. Exact Match: Style only 'text' type inputs */
+  input[type="text"] {
+    border: 2px solid red;
+    padding: 5px;
+  }
+
+  /* 3. Prefix Match (^=): Links starting with https (Secure) */
+  a[href^="https"] {
+    color: green;
+    text-decoration: none;
+  }
+
+  /* 4. Suffix Match ($=): Links ending in .pdf */
+  a[href$=".pdf"]::after {
+    content: " (PDF File)";
+    font-size: 10px;
+    color: red;
+  }
+
+  /* 5. Substring Match (*=): Contains the word 'blue' in the class */
+  [class*="blue"] {
+    background-color: lightblue;
+  }
+</style>
+</head>
+<body>
+
+  <h3>Attribute Selector Demo</h3>
+  
+  <p><a href="https://google.com" title="Search Engine">Secure Link with Title</a></p>
+  <p><a href="http://example.com">Unsecured Link</a></p>
+  <p><a href="manual.pdf">Download User Manual</a></p>
+  
+  <input type="text" placeholder="I am a text box">
+  <input type="password" placeholder="I am a password box">
+
+  <div class="main-blue-box">This box has 'blue' in its class name.</div>
+
+</body>
+</html>
+

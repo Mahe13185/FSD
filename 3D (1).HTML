@@ -1,0 +1,30 @@
+<style>
+  #target { width: 200px; height: 100px; border: 2px dashed #ccc; padding: 10px; }
+  #dragItem { width: 100px; background: #3498db; color: white; cursor: move; }
+</style>
+
+<div id="target" ondrop="drop(event)" ondragover="allowDrop(event)">
+  Drop here...
+</div>
+
+<br>
+
+<div id="dragItem" draggable="true" ondragstart="drag(event)">
+  Drag Me!
+</div>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault(); // Necessary to allow a drop
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id); // Store the ID of the element
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data)); // Move the element
+}
+</script>
