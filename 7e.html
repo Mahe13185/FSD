@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>String Object Example</title>
+<script>
+window.onload=function()
+{
+var name="Arjun Kumar";
+
+var p1=document.createElement("p");
+p1.textContent="Length: "+name.length;
+document.body.appendChild(p1);
+
+var p2=document.createElement("p");
+p2.textContent="Uppercase: "+name.toUpperCase();
+document.body.appendChild(p2);
+
+var p3=document.createElement("p");
+p3.textContent="Lowercase: "+name.toLowerCase();
+document.body.appendChild(p3);
+
+var p4=document.createElement("p");
+p4.textContent="First Name: "+name.substring(0,name.indexOf(" "));
+document.body.appendChild(p4);
+
+var p5=document.createElement("p");
+p5.textContent="Index of space: "+name.indexOf(" ");
+document.body.appendChild(p5);
+
+var split=name.split(" ");
+var p6=document.createElement("p");
+p6.textContent="Split name: "+split.join(" | ");
+document.body.appendChild(p6);
+
+var p7=document.createElement("p");
+p7.textContent="First Character: "+name.charAt(0);
+document.body.appendChild(p7);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

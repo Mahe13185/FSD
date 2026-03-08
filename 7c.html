@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Object Example</title>
+<script>
+window.onload=function()
+{
+var header=document.createElement("h1");
+header.textContent="Array Object Example";
+document.body.appendChild(header);
+
+var names=["Arjun","Aisha","Rohan","Priya"];
+
+var p1=document.createElement("p");
+p1.textContent="Initial Array: "+names.join(", ");
+document.body.appendChild(p1);
+
+var p2=document.createElement("p");
+p2.textContent="Array Length: "+names.length;
+document.body.appendChild(p2);
+
+names.push("Suresh");
+var p3=document.createElement("p");
+p3.textContent="After push: "+names.join(", ");
+document.body.appendChild(p3);
+
+names.pop();
+var p4=document.createElement("p");
+p4.textContent="After pop: "+names.join(", ");
+document.body.appendChild(p4);
+
+names.sort();
+var p5=document.createElement("p");
+p5.textContent="After sort: "+names.join(", ");
+document.body.appendChild(p5);
+
+names.reverse();
+var p6=document.createElement("p");
+p6.textContent="After reverse: "+names.join(", ");
+document.body.appendChild(p6);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

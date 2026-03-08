@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Window Object Example</title>
+<script>
+window.onload=function()
+{
+var heading=document.createElement("h1");
+heading.textContent="Window Object Demonstration";
+document.body.appendChild(heading);
+
+var url=document.createElement("p");
+url.textContent="Current URL: "+window.location.href;
+document.body.appendChild(url);
+
+var btn=document.createElement("button");
+btn.textContent="Show Window Size";
+btn.onclick=function()
+{
+alert("Width: "+window.innerWidth+" Height: "+window.innerHeight);
+};
+document.body.appendChild(btn);
+
+var btn2=document.createElement("button");
+btn2.textContent="Open New Window";
+btn2.onclick=function()
+{
+var newWin=window.open("","NewWindow","width=400,height=300");
+newWin.document.write("<h2>New Window Opened</h2>");
+};
+document.body.appendChild(btn2);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

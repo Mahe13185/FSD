@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document Object Example</title>
+<script>
+function Student(name,id,branch)
+{
+this.name=name;
+this.id=id;
+this.branch=branch;
+
+this.displayDetails=function()
+{
+var studentDiv=document.createElement("div");
+studentDiv.innerHTML="<h2>Student Details</h2>"+
+"<p>Name: "+this.name+"</p>"+
+"<p>ID: "+this.id+"</p>"+
+"<p>Branch: "+this.branch+"</p>";
+document.body.appendChild(studentDiv);
+}
+}
+
+window.onload=function()
+{
+var header=document.createElement("h1");
+header.textContent="My College - Student Details";
+document.body.appendChild(header);
+
+var student1=new Student("Arjun","A001","Computer Science");
+student1.displayDetails();
+
+var info=document.createElement("p");
+info.textContent="For more information visit admin department.";
+document.body.appendChild(info);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

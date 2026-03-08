@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Defined Object</title>
+<script>
+function Student(first,last,branch)
+{
+this.firstName=first;
+this.lastName=last;
+this.branch=branch;
+this.id="A"+Math.floor(Math.random()*1000);
+
+Object.defineProperty(this,"fullName",
+{
+get:function()
+{
+return this.firstName+" "+this.lastName;
+},
+set:function(name)
+{
+var parts=name.split(" ");
+this.firstName=parts[0];
+this.lastName=parts[1];
+}
+});
+
+this.display=function()
+{
+var div=document.createElement("div");
+div.innerHTML="<h2>Student Details</h2>"+
+"<p>ID: "+this.id+"</p>"+
+"<p>Name: "+this.fullName+"</p>"+
+"<p>Branch: "+this.branch+"</p>";
+document.body.appendChild(div);
+}
+}
+
+window.onload=function()
+{
+var s=new Student("Arjun","Kumar","CSE");
+s.display();
+
+s.fullName="Rahul Sharma";
+s.display();
+}
+</script>
+</head>
+<body>
+</body>
+</html>
