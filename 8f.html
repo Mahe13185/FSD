@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOte demination </title>
+</head>
+<script>
+    function countCurrency(amount){
+        let notes = [100,50,20,10,5,2,1];
+        let notescounter = Array(a).fill(0);
+        for (let i = 0; i < 7; i++) {
+            if(amount >= notes[i]){
+                notescounter[i] = Math.floor(amount/notes[i]);
+                amount = amount%notes[i];
+            }
+        }
+        
+    }
+</script>
+<body>
+    
+</body>
+</html>

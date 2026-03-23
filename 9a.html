@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>JavaScript Functions Example</title>
+
+<script>
+function factorial(n)
+{
+var fact = 1;
+for(var i=1; i<=n; i++)
+{
+fact = fact * i;
+}
+document.write("Factorial of " + n + " is: " + fact + "<br><br>");
+}
+
+function fibonacci(n)
+{
+var a = 0, b = 1, c;
+document.write("Fibonacci series up to " + n + ": <br>");
+document.write(a + " " + b + " ");
+
+while(true)
+{
+c = a + b;
+if(c > n)
+break;
+
+document.write(c + " ");
+a = b;
+b = c;
+}
+document.write("<br><br>");
+}
+
+function primeNumbers(n)
+{
+document.write("Prime numbers up to " + n + ": <br>");
+
+for(var i=2; i<=n; i++)
+{
+var count = 0;
+
+for(var j=1; j<=i; j++)
+{
+if(i % j == 0)
+count++;
+}
+
+if(count == 2)
+document.write(i + " ");
+}
+document.write("<br><br>");
+}
+
+function palindrome(n)
+{
+var temp = n;
+var rev = 0;
+
+while(n > 0)
+{
+var r = n % 10;
+rev = rev * 10 + r;
+n = parseInt(n / 10);
+}
+
+if(temp == rev)
+document.write(temp + " is a Palindrome number");
+else
+document.write(temp + " is NOT a Palindrome number");
+}
+
+function mainFunction()
+{
+var num = parseInt(prompt("Enter a number:"));
+
+factorial(num);
+fibonacci(num);
+primeNumbers(num);
+palindrome(num);
+}
+</script>
+
+</head>
+
+<body>
+<h2>JavaScript Function Example</h2>
+
+<button onclick="mainFunction()">Enter Number</button>
+
+</body>
+</html>
